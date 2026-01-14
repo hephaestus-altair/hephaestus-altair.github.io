@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ config.title | default(value="My Blog") }}{% endblock title %}</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 800px; margin: 0 auto; padding: 1rem; line-height: 1.5; }
+        header { margin-bottom: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">Home</a>
+    </header>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+</html>
