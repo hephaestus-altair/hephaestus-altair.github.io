@@ -7,5 +7,8 @@
         <h1>{{ page.title }}</h1>
         <time>{{ page.date }}</time>
         {{ page.content | safe }}
+        {% if config.extra.license %}
+            <p>License: <a href="{{ config.extra.license_url }}">{{ config.extra.license }}</a></p>
+        {% endif %}
     </article>
 {% endblock content %}
